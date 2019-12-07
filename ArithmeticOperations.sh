@@ -31,7 +31,14 @@ do
 	arrayResult[$i]="${resultDict["result $i"]}"
 done
 
+echo "Sorted Descending Order"
 for (( i=1; i<=${#resultDict[@]}; i++ ))
 do
 echo ${arrayResult[$i]}
 done | sort -nr
+
+echo "Sorted Ascending Order"
+for (( i=1; i<=${#resultDict[@]}; i++ ))
+do
+echo ${arrayResult[$i]}
+done | sort -n

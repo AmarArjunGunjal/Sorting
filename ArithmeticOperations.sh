@@ -12,13 +12,13 @@ result2=$((($a*$b)+$c))
 result3=$(($c+($a/$b)))
 result4=$((($a%$b)+c))
 
-#echo "$result"
+echo "$result1"
 
-#echo "$result1"
+echo "$result2"
 
-#echo "$result2"
+echo "$result3"
 
-#echo "$result3"
+echo "$result4"
 
 
 resultDict["result 1"]=$result1
@@ -31,4 +31,7 @@ do
 	arrayResult[$i]="${resultDict["result $i"]}"
 done
 
-echo ${arrayResult[@]}
+for (( i=1; i<=${#resultDict[@]}; i++ ))
+do
+echo ${arrayResult[$i]}
+done | sort -nr
